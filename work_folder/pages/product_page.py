@@ -28,3 +28,6 @@ class ProductPage(BasePage):
         assert self.is_not_element_present(
             *AddBasketLocators.SUCCESS_MESSAGE), \
             "Success message is dissapered"
+
+
+

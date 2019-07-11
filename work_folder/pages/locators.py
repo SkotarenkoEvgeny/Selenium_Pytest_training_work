@@ -1,8 +1,9 @@
 from selenium.webdriver.common.by import By
 
 
-class MainPageLocators(object):
+class BasePageLocators(object):
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
+    LOGIN_PAGE = (By.XPATH, "//li[@class='active']")
 
 
 class LoginPageLocators(object):
