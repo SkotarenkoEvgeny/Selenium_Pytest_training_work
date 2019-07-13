@@ -70,3 +70,11 @@ class BasePage(object):
         link.click()
         assert self.browser.find_element(
             *BasePageLocators.LOGIN_PAGE).text == "Login or register", "Not found login page"
+
+    def go_to_basket(self):
+        button = self.browser.find_element(*BasePageLocators.BASKET_BUTTON)
+        button.click()
+
+    def not_produkt_in_basket(self):
+        return self.is_not_element_present(BasePageLocators.BASKET_TABLE[0], BasePageLocators.BASKET_TABLE[1])
+

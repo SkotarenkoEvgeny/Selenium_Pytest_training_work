@@ -4,6 +4,8 @@ from selenium.webdriver.common.by import By
 class BasePageLocators(object):
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
     LOGIN_PAGE = (By.XPATH, "//li[@class='active']")
+    BASKET_BUTTON = (By.XPATH, "//a[@class='btn btn-default']")
+    BASKET_TABLE = (By.XPATH, "//div[@id='basket_totals']")
 
 
 class LoginPageLocators(object):
