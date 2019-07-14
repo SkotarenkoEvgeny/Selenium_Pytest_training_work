@@ -6,11 +6,16 @@ class BasePageLocators(object):
     LOGIN_PAGE = (By.XPATH, "//li[@class='active']")
     BASKET_BUTTON = (By.XPATH, "//a[@class='btn btn-default']")
     BASKET_TABLE = (By.XPATH, "//div[@id='basket_totals']")
+    USER_ICON = (By.CSS_SELECTOR, ".icon-user")
 
 
 class LoginPageLocators(object):
     SHOULD_BE_LOGIN_FORM = (By.CSS_SELECTOR, "#login_form")
     SHOULD_BE_REGISTER_FORM = (By.CSS_SELECTOR, "#register_form")
+    REGISTER_FORM_MAIL = (By.XPATH, '//input[@id="id_registration-email"]')
+    REGISTER_FORM_PASS = (By.XPATH, '//input[@id="id_registration-password1"]')
+    REGISTER_FORM_PASS_CONFIRM = (By.XPATH, '//input[@id="id_registration-password2"]')
+    REGISTER_FORM_BUTTON = (By.XPATH, '//button[@name="registration_submit"]')
 
 
 class AddBasketLocators(object):

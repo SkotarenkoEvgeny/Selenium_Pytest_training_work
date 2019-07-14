@@ -76,5 +76,10 @@ class BasePage(object):
         button.click()
 
     def not_produkt_in_basket(self):
-        return self.is_not_element_present(BasePageLocators.BASKET_TABLE[0], BasePageLocators.BASKET_TABLE[1])
+        return self.is_not_element_present(BasePageLocators.BASKET_TABLE[0],
+                                           BasePageLocators.BASKET_TABLE[1])
 
+    def should_be_authorized_user(self):
+        assert self.is_element_present(
+            *BasePageLocators.USER_ICON), "User icon is not presented," \
+                                          " probably unauthorised user"
